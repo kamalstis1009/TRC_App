@@ -15,13 +15,13 @@ public class ConstantKey {
     public static ArrayList<Category> getDivisions() {
         ArrayList<Category> mArrayList = new ArrayList<>();
         mArrayList.add(new Category(1, "About", R.drawable.ic_baseline_error_outline_24));
-        mArrayList.add(new Category(2, "Vat/Tax Guidelines", R.drawable.ic_baseline_error_outline_24));
-        mArrayList.add(new Category(3, "Consultants", R.drawable.ic_baseline_error_outline_24));
-        mArrayList.add(new Category(4, "Application Form", R.drawable.ic_baseline_error_outline_24));
-        mArrayList.add(new Category(5, "Vat Calculation", R.drawable.ic_baseline_error_outline_24));
-        mArrayList.add(new Category(6, "Tax Calculation", R.drawable.ic_baseline_error_outline_24));
-        mArrayList.add(new Category(7, "Offers", R.drawable.ic_baseline_error_outline_24));
-        mArrayList.add(new Category(8, "Extra", R.drawable.ic_baseline_error_outline_24));
+        mArrayList.add(new Category(2, "Vat/Tax Guidelines", R.drawable.ic_baseline_person_24));
+        mArrayList.add(new Category(3, "Consultants", R.drawable.ic_baseline_person_24));
+        mArrayList.add(new Category(4, "Application Form", R.drawable.ic_baseline_person_24));
+        mArrayList.add(new Category(5, "Vat Calculation", R.drawable.ic_baseline_person_24));
+        mArrayList.add(new Category(6, "Tax Calculation", R.drawable.ic_baseline_person_24));
+        mArrayList.add(new Category(7, "Offers", R.drawable.ic_baseline_person_24));
+        mArrayList.add(new Category(8, "Extra", R.drawable.ic_baseline_person_24));
         return mArrayList;
     }
 }

@@ -13,8 +13,8 @@
         android:layout_height="70dp">
         <ImageView
             android:id="@+id/category_icon"
-            android:backgroundTint="@color/colorPrimary"
-            android:background="@drawable/ic_baseline_person_24"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/ic_baseline_person_24"
             android:layout_width="70dp"
             android:layout_height="70dp"/>
     </RelativeLayout>
