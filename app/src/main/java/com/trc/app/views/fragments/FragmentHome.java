@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.trc.app.R;
+import com.trc.app.models.Category;
 import com.trc.app.utils.ConstantKey;
 import com.trc.app.utils.GridSpacingItemDecoration;
 import com.trc.app.views.adapters.CategoryAdapter;
@@ -33,7 +34,7 @@ public class FragmentHome extends Fragment {
         return view;
     }
 
-    private void initRecyclerView(RecyclerView mRecyclerView, ArrayList<String> arrayList) {
+    private void initRecyclerView(RecyclerView mRecyclerView, ArrayList<Category> arrayList) {
         CategoryAdapter mAdapter = new CategoryAdapter(getActivity(), arrayList);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());

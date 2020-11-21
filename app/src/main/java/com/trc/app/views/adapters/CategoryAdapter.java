@@ -12,15 +12,16 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.trc.app.R;
+import com.trc.app.models.Category;
 
 import java.util.ArrayList;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder> {
 
     private FragmentActivity mActivity;
-    private ArrayList<String> mArrayList;
+    private ArrayList<Category> mArrayList;
 
-    public CategoryAdapter(FragmentActivity context, ArrayList<String> arrayList) {
+    public CategoryAdapter(FragmentActivity context, ArrayList<Category> arrayList) {
         this.mActivity = context;
         this.mArrayList = arrayList;
     }
@@ -34,8 +35,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        String title = mArrayList.get(position);
-        holder.textView.setText(title);
+        Category model = mArrayList.get(position);
+        holder.textView.setText(model.getName());
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

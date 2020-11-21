@@ -1,5 +1,7 @@
 package com.trc.app.utils;
 
+import com.trc.app.models.Category;
+
 import java.util.ArrayList;
 
 public class ConstantKey {
@@ -9,16 +11,16 @@ public class ConstantKey {
     public static final String SERVER_URL = "http://192.168.0.18:8080/"; //https://localhost:44379/ OR IPv4 192.168.0.105 OR https://docs.microsoft.com/en-us/xamarin/cross-platform/deploy-test/connect-to-local-web-services
     public static final String IMAGE_SERVER_URL = SERVER_URL + "api/file/Download?filePath=";
 
-    public static ArrayList<String> getDivisions() {
-        ArrayList<String> mArrayList = new ArrayList<>();
-        mArrayList.add("About");
-        mArrayList.add("Vat/Tax Guidelines");
-        mArrayList.add("Consultants");
-        mArrayList.add("Application Form");
-        mArrayList.add("Vat Calculation");
-        mArrayList.add("Tax Calculation");
-        mArrayList.add("Offers");
-        mArrayList.add("Extra");
+    public static ArrayList<Category> getDivisions() {
+        ArrayList<Category> mArrayList = new ArrayList<>();
+        mArrayList.add(new Category(1, "About", ""));
+        mArrayList.add(new Category(2, "Vat/Tax Guidelines", ""));
+        mArrayList.add(new Category(3, "Consultants", ""));
+        mArrayList.add(new Category(4, "Application Form", ""));
+        mArrayList.add(new Category(5, "Vat Calculation", ""));;
+        mArrayList.add(new Category(6, "Tax Calculation", ""));;
+        mArrayList.add(new Category(7, "Offers", ""));;
+        mArrayList.add(new Category(8, "Extra", ""));
         return mArrayList;
     }
 }
