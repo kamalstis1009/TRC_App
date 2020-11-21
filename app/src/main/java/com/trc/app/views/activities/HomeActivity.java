@@ -85,16 +85,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.home_menu_id) {
-            Utility.getInstance().onReplaceFragment(getSupportFragmentManager(), new FragmentHome());
+            Utility.getInstance().onAddFragment(getSupportFragmentManager(), new FragmentHome());
         }
         if (item.getItemId() == R.id.service_id) {
-            Utility.getInstance().onReplaceFragment(getSupportFragmentManager(), new FragmentService());
+            Utility.getInstance().onAddFragment(getSupportFragmentManager(), new FragmentService());
         }
         if (item.getItemId() == R.id.about_id) {
-            Utility.getInstance().onReplaceFragment(getSupportFragmentManager(), new FragmentAbout());
+            Utility.getInstance().onAddFragment(getSupportFragmentManager(), new FragmentAbout());
         }
         if (item.getItemId() == R.id.contact_id) {
-            Utility.getInstance().onReplaceFragment(getSupportFragmentManager(), new FragmentContact());
+            Utility.getInstance().onAddFragment(getSupportFragmentManager(), new FragmentContact());
         }
         return false;
     }

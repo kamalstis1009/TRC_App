@@ -670,11 +670,12 @@ public class Utility {
     //===============================================| Add fragment | Replace fragment | Remove fragment
     //https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-addtobackstack
     public void onAddFragment(FragmentManager mFragmentManager, Fragment mFragment){
-        mFragmentManager.beginTransaction()
+        /*mFragmentManager.beginTransaction()
                 .setCustomAnimations(R.anim.fragment_fade_enter, 0)
                 .add(R.id.home_container, mFragment) //.replace(R.id.home_container, mFragment)
                 .addToBackStack(null)
-                .commitAllowingStateLoss(); //.commit();
+                .commitAllowingStateLoss(); //.commit();*/
+        mFragmentManager.beginTransaction().setCustomAnimations(R.anim.fragment_fade_enter, 0).add(R.id.home_container, mFragment).addToBackStack(mFragment.getTag()).commitAllowingStateLoss();
     }
     public void onReplaceFragment(FragmentManager mFragmentManager, Fragment mFragment){
         mFragmentManager.beginTransaction()
