@@ -1,8 +1,13 @@
 package com.trc.app.views.adapters;
 
+import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
@@ -32,7 +37,12 @@ public class GuidelineAdapter extends RecyclerView.Adapter<GuidelineAdapter.MyVi
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        Guideline model = mArrayList.get(position);
 
+        //holder.imageView.setImageResource(model.getIcon());
+        //holder.imageView.setColorFilter(mActivity.getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_ATOP);
+        holder.itemTitle.setText(model.getGuideTitle());
+        holder.itemTitle.setText(model.getGuideText());
     }
 
     @Override
@@ -41,8 +51,16 @@ public class GuidelineAdapter extends RecyclerView.Adapter<GuidelineAdapter.MyVi
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
+        LinearLayout layout;
+        ImageView imageView;
+        TextView itemTitle, itemDetails, itemDate;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            layout = (LinearLayout) itemView.findViewById(R.id.item_layout);
+            imageView = (ImageView) itemView.findViewById(R.id.item_icon);
+            itemTitle = (TextView) itemView.findViewById(R.id.item_title);
+            itemDetails = (TextView) itemView.findViewById(R.id.item_details);
+            itemDate = (TextView) itemView.findViewById(R.id.item_date);
         }
     }
 }
