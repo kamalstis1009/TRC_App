@@ -1,9 +1,10 @@
 package com.trc.app.views.adapters;
 
-import android.os.Bundle;
+import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -41,7 +42,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Category model = mArrayList.get(position);
+
+        holder.imageView.setImageResource(model.getIcon());
+        holder.imageView.setColorFilter(mActivity.getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_ATOP);
         holder.textView.setText(model.getName());
+
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,10 +82,12 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         RelativeLayout layout;
+        ImageView imageView;
         TextView textView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             layout = (RelativeLayout) itemView.findViewById(R.id.category_layout);
+            imageView = (ImageView) itemView.findViewById(R.id.category_icon);
             textView = (TextView) itemView.findViewById(R.id.category_title);
         }
     }

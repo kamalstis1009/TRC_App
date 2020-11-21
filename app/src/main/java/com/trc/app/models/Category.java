@@ -4,9 +4,9 @@ public class Category {
 
     private int id;
     private String name;
-    private String icon;
+    private int icon;
 
-    public Category(int id, String name, String icon) {
+    public Category(int id, String name, int icon) {
         this.id = id;
         this.name = name;
         this.icon = icon;
@@ -28,11 +28,11 @@ public class Category {
         this.name = name;
     }
 
-    public String getIcon() {
+    public int getIcon() {
         return icon;
     }
 
-    public void setIcon(String icon) {
+    public void setIcon(int icon) {
         this.icon = icon;
     }
 }
