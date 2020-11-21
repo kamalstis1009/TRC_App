@@ -19,7 +19,9 @@ import com.trc.app.services.MyNetworkReceiver;
 import com.trc.app.session.SharedPefManager;
 import com.trc.app.utils.Utility;
 import com.trc.app.views.fragments.FragmentAbout;
+import com.trc.app.views.fragments.FragmentContact;
 import com.trc.app.views.fragments.FragmentHome;
+import com.trc.app.views.fragments.FragmentService;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -80,6 +82,23 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.home_menu_id) {
+            Utility.getInstance().onReplaceFragment(getSupportFragmentManager(), new FragmentHome());
+        }
+        if (item.getItemId() == R.id.service_id) {
+            Utility.getInstance().onReplaceFragment(getSupportFragmentManager(), new FragmentService());
+        }
+        if (item.getItemId() == R.id.about_id) {
+            Utility.getInstance().onReplaceFragment(getSupportFragmentManager(), new FragmentAbout());
+        }
+        if (item.getItemId() == R.id.contact_id) {
+            Utility.getInstance().onReplaceFragment(getSupportFragmentManager(), new FragmentContact());
+        }
+        return false;
+    }
+
     private void setNavigationDrawer(DrawerLayout drawerLayout, Toolbar toolbar) {
         ActionBarDrawerToggle mToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(mToggle);
@@ -96,14 +115,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         //((TextView) findViewById(R.id.log_out)).setOnLongClickListener(new ActionHandler());
         //((TextView) findViewById(R.id.log_out)).setOnClickListener(new ActionHandler());
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.home_menu_id) {
-            Utility.getInstance().onReplaceFragment(getSupportFragmentManager(), new FragmentAbout());
-        }
-        return false;
     }
 
 }
