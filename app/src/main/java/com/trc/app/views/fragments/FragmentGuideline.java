@@ -25,7 +25,7 @@ public class FragmentGuideline extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_guideline, container, false);
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Home");
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Guideline");
 
         RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.guideline_recycler_view);
         initRecyclerView(mRecyclerView, ConstantKey.getGuidelines());
