@@ -42,7 +42,7 @@ public class GuidelineAdapter extends RecyclerView.Adapter<GuidelineAdapter.MyVi
         //holder.imageView.setImageResource(model.getIcon());
         //holder.imageView.setColorFilter(mActivity.getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_ATOP);
         holder.itemTitle.setText(model.getGuideTitle());
-        holder.itemTitle.setText(model.getGuideText());
+        holder.itemDetails.setText(model.getGuideText());
     }
 
     @Override

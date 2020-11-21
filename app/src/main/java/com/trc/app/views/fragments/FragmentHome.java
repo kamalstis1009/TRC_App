@@ -29,7 +29,7 @@ public class FragmentHome extends Fragment {
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Home");
 
         RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.category_recycler_view);
-        initRecyclerView(mRecyclerView, ConstantKey.getDivisions());
+        initRecyclerView(mRecyclerView, ConstantKey.getCategories());
 
         return view;
     }
