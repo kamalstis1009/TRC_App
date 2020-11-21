@@ -37,8 +37,8 @@ public class FragmentHome extends Fragment {
         CategoryAdapter mAdapter = new CategoryAdapter(getActivity(), arrayList);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 4));
-        mRecyclerView.addItemDecoration(new GridSpacingItemDecoration(4 /*spanCount*/, 5 /*px spacing*/, false /*includeEdge*/));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        mRecyclerView.addItemDecoration(new GridSpacingItemDecoration(2 /*spanCount*/, 5 /*px spacing*/, false /*includeEdge*/));
         mAdapter.notifyDataSetChanged();
     }
 }

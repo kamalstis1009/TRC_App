@@ -44,7 +44,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             if (getSupportActionBar() != null) {
-                getSupportActionBar().setDisplayShowTitleEnabled(false); //Remove title
+                getSupportActionBar().setDisplayShowTitleEnabled(true); //Remove title
                 getSupportActionBar().setDisplayShowHomeEnabled(false);
             }
             //toolbar.getBackground().setAlpha(200);
