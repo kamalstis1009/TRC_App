@@ -11,14 +11,14 @@ public class ConstantKey {
 
     public static ArrayList<String> getDivisions() {
         ArrayList<String> mArrayList = new ArrayList<>();
-        mArrayList.add("Barisal");
-        mArrayList.add("Chittagong");
-        mArrayList.add("Dhaka");
-        mArrayList.add("Khulna");
-        mArrayList.add("Mymensingh");
-        mArrayList.add("Rangpur");
-        mArrayList.add("Rajshahi");
-        mArrayList.add("Sylhet");
+        mArrayList.add("About");
+        mArrayList.add("Vat/Tax Guidelines");
+        mArrayList.add("Consultants");
+        mArrayList.add("Application Form");
+        mArrayList.add("Vat Calculation");
+        mArrayList.add("Tax Calculation");
+        mArrayList.add("Offers");
+        mArrayList.add("Extra");
         return mArrayList;
     }
 }
