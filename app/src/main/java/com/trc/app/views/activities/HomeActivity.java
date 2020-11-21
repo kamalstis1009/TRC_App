@@ -119,7 +119,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         ((CircleImageView) mView.findViewById(R.id.nav_header_photo)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, SignUpActivity.class));
+                startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
             }
         });
 
