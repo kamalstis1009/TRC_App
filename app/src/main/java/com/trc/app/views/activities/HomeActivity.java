@@ -91,11 +91,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (item.getItemId() == R.id.home_menu_id) {
             Utility.getInstance().onAddFragment(getSupportFragmentManager(), new FragmentHome());
         }
-        if (item.getItemId() == R.id.service_id) {
-            Utility.getInstance().onAddFragment(getSupportFragmentManager(), new FragmentService());
-        }
         if (item.getItemId() == R.id.about_id) {
             Utility.getInstance().onAddFragment(getSupportFragmentManager(), new FragmentAbout());
+        }
+        if (item.getItemId() == R.id.service_id) {
+            Utility.getInstance().onAddFragment(getSupportFragmentManager(), new FragmentService());
         }
         if (item.getItemId() == R.id.contact_id) {
             Utility.getInstance().onAddFragment(getSupportFragmentManager(), new FragmentContact());
