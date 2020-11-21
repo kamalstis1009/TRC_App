@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
@@ -22,6 +23,8 @@ import com.trc.app.views.fragments.FragmentAbout;
 import com.trc.app.views.fragments.FragmentContact;
 import com.trc.app.views.fragments.FragmentHome;
 import com.trc.app.views.fragments.FragmentService;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -105,14 +108,20 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        NavigationView mNavigationView = findViewById(R.id.nav_view);
+        mNavigationView.setNavigationItemSelectedListener(this);
 
-        View hView = navigationView.getHeaderView(0);
+        View mView = mNavigationView.getHeaderView(0);
         /*if (user != null) {
-            //Picasso.get().load(userModel.getImageUrl()).into(((CircleImageView) hView.findViewById(R.id.nav_header_photo)));
-            ((TextView) hView.findViewById(R.id.nav_header_user)).setText(user.getUserFullName());
+            //Picasso.get().load(userModel.getImageUrl()).into(((CircleImageView) mView.findViewById(R.id.nav_header_photo)));
+            ((TextView) mView.findViewById(R.id.nav_header_user)).setText(user.getUserFullName());
         }*/
+        ((CircleImageView) mView.findViewById(R.id.nav_header_photo)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, SignUpActivity.class));
+            }
+        });
 
         //((TextView) findViewById(R.id.log_out)).setOnLongClickListener(new ActionHandler());
         //((TextView) findViewById(R.id.log_out)).setOnClickListener(new ActionHandler());
