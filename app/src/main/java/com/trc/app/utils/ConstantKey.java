@@ -2,6 +2,7 @@ package com.trc.app.utils;
 
 import com.trc.app.R;
 import com.trc.app.models.Category;
+import com.trc.app.models.Consultant;
 import com.trc.app.models.Guideline;
 
 import java.util.ArrayList;
@@ -37,6 +38,16 @@ public class ConstantKey {
         mArrayList.add(new Guideline("Tax Calculation", guide));
         mArrayList.add(new Guideline("Offers", guide));
         mArrayList.add(new Guideline("Extra", guide));
+        return mArrayList;
+    }
+
+    public static ArrayList<Consultant> getConsultants() {
+        ArrayList<Consultant> mArrayList = new ArrayList<>();
+        mArrayList.add(new Consultant("MD. ALIMUZZAMAN", "March 15, 1993- September 14, 1996", "CHIEF CONSUSTANT", "01799707090", "alim121971@gmail.com", "He has 23 years work experience in Taxation, VAT and Customs at Bashundhara Group, Khaled Group and Crown Cement Group.", "C.A Course Completed ICAB, Bangladesh"));
+        mArrayList.add(new Consultant("MD. ALIMUZZAMAN", "March 15, 1993- September 14, 1996", "CHIEF CONSUSTANT", "01799707090", "alim121971@gmail.com", "He has 23 years work experience in Taxation, VAT and Customs at Bashundhara Group, Khaled Group and Crown Cement Group.", "C.A Course Completed ICAB, Bangladesh"));
+        mArrayList.add(new Consultant("MD. ALIMUZZAMAN", "March 15, 1993- September 14, 1996", "CHIEF CONSUSTANT", "01799707090", "alim121971@gmail.com", "He has 23 years work experience in Taxation, VAT and Customs at Bashundhara Group, Khaled Group and Crown Cement Group.", "C.A Course Completed ICAB, Bangladesh"));
+        mArrayList.add(new Consultant("MD. ALIMUZZAMAN", "March 15, 1993- September 14, 1996", "CHIEF CONSUSTANT", "01799707090", "alim121971@gmail.com", "He has 23 years work experience in Taxation, VAT and Customs at Bashundhara Group, Khaled Group and Crown Cement Group.", "C.A Course Completed ICAB, Bangladesh"));
+        mArrayList.add(new Consultant("MD. ALIMUZZAMAN", "March 15, 1993- September 14, 1996", "CHIEF CONSUSTANT", "01799707090", "alim121971@gmail.com", "He has 23 years work experience in Taxation, VAT and Customs at Bashundhara Group, Khaled Group and Crown Cement Group.", "C.A Course Completed ICAB, Bangladesh"));
         return mArrayList;
     }
 }
