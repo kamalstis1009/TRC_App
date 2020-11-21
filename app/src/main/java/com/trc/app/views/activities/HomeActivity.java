@@ -12,6 +12,7 @@ import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 import com.trc.app.R;
@@ -124,7 +125,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         });
 
         //((TextView) findViewById(R.id.log_out)).setOnLongClickListener(new ActionHandler());
-        //((TextView) findViewById(R.id.log_out)).setOnClickListener(new ActionHandler());
+        ((TextView) findViewById(R.id.log_out)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, SignInActivity.class));
+            }
+        });
     }
 
 }
