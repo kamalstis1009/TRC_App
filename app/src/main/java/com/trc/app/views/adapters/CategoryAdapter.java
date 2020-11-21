@@ -13,8 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.trc.app.R;
 import com.trc.app.models.Category;
+import com.trc.app.utils.Utility;
+import com.trc.app.views.fragments.FragmentAbout;
+import com.trc.app.views.fragments.FragmentGuideline;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder> {
 
@@ -45,6 +49,22 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
                 FragmentCategoryWiseProduct mFragment = new FragmentCategoryWiseProduct();
                 mFragment.setArguments(bundle);
                 Utility.getInstance().onAddFragment(Objects.requireNonNull(mActivity).getSupportFragmentManager(), mFragment);*/
+
+                if (model.getId() == 1) {
+                    Utility.getInstance().onAddFragment(Objects.requireNonNull(mActivity).getSupportFragmentManager(), new FragmentAbout());
+                } else if (model.getId() == 2) {
+                    Utility.getInstance().onAddFragment(Objects.requireNonNull(mActivity).getSupportFragmentManager(), new FragmentGuideline());
+                } else if (model.getId() == 3) {
+                    //
+                } else if (model.getId() == 4) {
+                    //
+                } else if (model.getId() == 5) {
+                    //
+                } else if (model.getId() == 6) {
+                    //
+                } else if (model.getId() == 7) {
+                    //
+                }
             }
         });
     }
