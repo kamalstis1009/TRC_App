@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.trc.app.R;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder> {
 
@@ -55,11 +54,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        LinearLayout layout;
+        RelativeLayout layout;
         TextView textView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            layout = (LinearLayout) itemView.findViewById(R.id.category_layout);
+            layout = (RelativeLayout) itemView.findViewById(R.id.category_layout);
             textView = (TextView) itemView.findViewById(R.id.category_title);
         }
     }
