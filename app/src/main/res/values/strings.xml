@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">TRC App</string>
+
+    <!-- Nav button -->
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
+    <!-- ProgressDialog -->
+    <string name="progress">Please wait…</string>
+    <string name="alert_title">Alert</string>
+    <string name="alert_ok">OK</string>
+
+    <!-- Alert messages -->
+    <string name="error_msg_network">Network connection is not available.</string>
+    <string name="error_msg_location">Location service is not enabled.</string>
+    <string name="error_msg_server_response">Server Response Failed!</string>
+    <string name="error_msg_server_connection">Server Connection Failed!</string>
+
+    <!-- Arrays -->
+    <string-array name="role_array">
+        <item>Select Role</item>
+        <item>USER</item>
+        <item>ADMIN</item>
+    </string-array>
+
+    <!-- About -->
+    <string name="company_overview">TRC offering Accounting, Tax planning, VAT planning and advisory services; working closely with NBR for providing best services to our valuable clients for helping them to minimizing risks and be compliant for maximizing their benefit applying our prudent knowledge.
+        \nOur effort to reforms that strengthen the market\'s credibility of the business owners and do hassle free business from legal complexities.</string>
+    <string name="our_mission">REMOVE THE SCARE OF COMPLIANCE REGARDING VAT, TAX AND CUSTOMS LAWS AND SOLVING COMPLEXITY OF BUSINESS RELATING OTHER LAWS &amp; REGULATIONS OF THE BUSINESSMEN. TO MOTIVATE AND MAKE BELIEF AMONG BUSINESSMEN THAT COMPLIANCE REDUCES RISK AND COST AS WELL AS INCREASES FINANCIAL BENEFIT.</string>
+    <string name="our_vision">TO BECOME A LEADING PLAYER IN VAT, CUSTOMS, ACCOUNTING, TAXATION, ASSURANCE, COMPLIANCE AND BUSINESS CONSULTANCY SERVICES AS A GLOBAL BUSINESS PARTNER.</string>
+    <string name="demo"></string>
+
+</resources>

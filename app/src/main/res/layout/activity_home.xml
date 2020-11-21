@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    tools:openDrawer="start"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorLightGrey"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.activities.HomeActivity">
+
+    <!-- Body -->
+    <include
+        layout="@layout/home_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--NavigationView Bar in left side-->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:background="@color/colorWhite"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        map:itemTextColor="@color/colorDarkGrey"
+        map:itemIconTint="@color/colorDarkGrey"
+        app:headerLayout="@layout/home_nav_header"
+        app:menu="@menu/home_menu_nav_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+        <RelativeLayout
+            android:layout_gravity="bottom"
+            android:padding="15dp"
+            android:background="@color/colorPrimaryDark"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/log_out"
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                android:text="SIGN OUT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                android:layout_alignParentRight="true"
+                android:text="TRC v1.0.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
