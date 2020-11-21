@@ -3,17 +3,39 @@ package com.trc.app.views.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.trc.app.R;
+import com.trc.app.utils.ConstantKey;
+import com.trc.app.utils.GridSpacingItemDecoration;
+import com.trc.app.views.adapters.CategoryAdapter;
+
+import java.util.ArrayList;
 
 public class FragmentHome extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.category_recycler_view);
+        initRecyclerView(mRecyclerView, ConstantKey.getDivisions());
+
+        return view;
+    }
+
+    private void initRecyclerView(RecyclerView mRecyclerView, ArrayList<String> arrayList) {
+        CategoryAdapter mAdapter = new CategoryAdapter(getActivity(), arrayList);
+        mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 4));
+        mRecyclerView.addItemDecoration(new GridSpacingItemDecoration(4 /*spanCount*/, 5 /*px spacing*/, false /*includeEdge*/));
+        mAdapter.notifyDataSetChanged();
     }
 }
