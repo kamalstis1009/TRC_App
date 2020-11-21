@@ -2,6 +2,7 @@ package com.trc.app.views.fragments;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -23,6 +24,8 @@ public class FragmentHome extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Home");
 
         RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.category_recycler_view);
         initRecyclerView(mRecyclerView, ConstantKey.getDivisions());

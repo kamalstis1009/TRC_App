@@ -101,6 +101,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private void setNavigationDrawer(DrawerLayout drawerLayout, Toolbar toolbar) {
         ActionBarDrawerToggle mToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        mToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.colorWhite));
         drawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
 
