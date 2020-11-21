@@ -16,6 +16,8 @@ import com.trc.app.R;
 import com.trc.app.models.Category;
 import com.trc.app.utils.Utility;
 import com.trc.app.views.fragments.FragmentAbout;
+import com.trc.app.views.fragments.FragmentApplicationForm;
+import com.trc.app.views.fragments.FragmentCalculation;
 import com.trc.app.views.fragments.FragmentConsultant;
 import com.trc.app.views.fragments.FragmentGuideline;
 
@@ -63,11 +65,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
                 } else if (model.getId() == 3) {
                     Utility.getInstance().onAddFragment(Objects.requireNonNull(mActivity).getSupportFragmentManager(), new FragmentConsultant());
                 } else if (model.getId() == 4) {
-                    //
+                    Utility.getInstance().onAddFragment(Objects.requireNonNull(mActivity).getSupportFragmentManager(), new FragmentApplicationForm());
                 } else if (model.getId() == 5) {
-                    //
+                    Utility.getInstance().onAddFragment(Objects.requireNonNull(mActivity).getSupportFragmentManager(), new FragmentCalculation());
                 } else if (model.getId() == 6) {
-                    //
+                    Utility.getInstance().onAddFragment(Objects.requireNonNull(mActivity).getSupportFragmentManager(), new FragmentCalculation());
                 } else if (model.getId() == 7) {
                     //
                 }
